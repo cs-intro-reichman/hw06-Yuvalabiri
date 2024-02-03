@@ -153,6 +153,7 @@ public class Runigram {
 	public static Color[][] scaled(Color[][] image, int width, int height) {
 		//// Replace the following statement with your code
 		Color[][] scaledimage = new Color[height][width];
+		// #feedback - since these variables are only used inside the for loops, you can define them there instead of initializing them here.
 		int newhight = 0;
 		int newwidth = 0;
 
@@ -181,6 +182,8 @@ public class Runigram {
 		double green = alpha * c1.getGreen() + (1 - alpha) * c2.getGreen();
 		double blue = alpha * c1.getBlue() + (1 - alpha) * c2.getBlue();
 
+		// #feedback - to reduce the amount of variables and complexiti of the code, you can cast to int in the Color constructor -
+		// new Coloe ((int) red, (int) green, (int) blue)
 		int blendred = (int) (red);
 		int blendgreen = (int) (green);
 		int blendblue = (int) (blue);
